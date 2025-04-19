@@ -14,8 +14,8 @@ async function createToken() {
   // Connect to cluster
   const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
   
-  // Use our pre-generated wallet keypair
-  const walletData = JSON.parse(fs.readFileSync('./mintWallet.json'));
+  // Use our pre-generated wallet keypair with mnemonic
+  const walletData = JSON.parse(fs.readFileSync('./mnemonicWallet.json'));
   const payerSecretKey = new Uint8Array(walletData.privateKey);
   const payer = Keypair.fromSecretKey(payerSecretKey);
   console.log(`Using wallet: ${payer.publicKey.toString()}`);
