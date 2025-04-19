@@ -1,0 +1,10 @@
+{
+  "network": "mainnet-beta",
+  "tokenAddress": "CZYEuJdZKUVstqux7CcmyTfpEJj9CMF6NuVNhLzVCU3w",
+  "tokenAccount": "DAmqf1wEZTTjNhHDKFc2fCxgFcTF1c7FU9FPGJuqkdEy",
+  "walletAddress": "B1ZE8ufwLkQddmxVrfWPVFi96uQRK4rGdYDr9SNKi6TK",
+  "supply": "1000000000 LOKQ",
+  "mintAuthority": "disabled",
+  "decimals": 9,
+  "created": "2025-04-19 09:26:08"
+}
