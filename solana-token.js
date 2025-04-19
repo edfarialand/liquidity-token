@@ -14,8 +14,11 @@ async function createToken() {
   // Connect to cluster
   const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
   
-  // Generate a new wallet keypair
-  const payer = Keypair.generate();
+  // Use our pre-generated wallet keypair
+  const walletData = JSON.parse(fs.readFileSync('./mintWallet.json'));
+  const payerSecretKey = new Uint8Array(walletData.privateKey);
+  const payer = Keypair.fromSecretKey(payerSecretKey);
+  console.log(`Using wallet: ${payer.publicKey.toString()}`);
   
   // Request airdrop for wallet
   console.log("Requesting airdrop to creator wallet...");
