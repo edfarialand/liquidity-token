@@ -71,7 +71,7 @@ async function createToken() {
   
   // Metadata for the token - using GitHub repo URL for metadata
   const tokenMetadata = {
-    name: "Lokquidity",
+    name: "Lokquidity - mint auth revo - liquidity locked",
     symbol: "LOKQ",
     uri: "https://raw.githubusercontent.com/edfarialand/liquidity-token/main/token-metadata.json", // Updated metadata URL from our repo
     sellerFeeBasisPoints: 0,
@@ -137,9 +137,9 @@ async function createToken() {
   
   // Save token metadata example JSON for arweave upload
   const metadataJson = {
-    name: "Lokquidity",
+    name: "Lokquidity - mint auth revo - liquidity locked",
     symbol: "LOKQ",
-    description: "A Solana token with locked liquidity and revoked mint authority",
+    description: "LOKQ is a pioneering Solana token designed with built-in protections against rug pulls and market manipulation. The token implements two critical security features: permanently revoked mint authority and locked liquidity. With mint authority revocation, no new tokens can ever be created, ensuring a truly fixed supply that can't be diluted by creators. The locked liquidity mechanism prevents sudden removal of trading pairs from decentralized exchanges, providing traders with confidence that they can always enter or exit positions. LOKQ demonstrates how blockchain technology can be leveraged to create inherently safer financial instruments through immutable code-based guarantees rather than relying solely on trust.",
     image: "https://raw.githubusercontent.com/edfarialand/liquidity-token/main/lokq-logo.png",
     attributes: [
       {

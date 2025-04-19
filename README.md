@@ -1,10 +1,10 @@
-# LOKQ Token (Lokquidity)
+# LOKQ Token (Lokquidity - mint auth revo - liquidity locked)
 
-A Solana token with locked liquidity and revoked mint authority.
+LOKQ is a pioneering Solana token designed with built-in protections against rug pulls and market manipulation. The token implements two critical security features: permanently revoked mint authority and locked liquidity. With mint authority revocation, no new tokens can ever be created, ensuring a truly fixed supply that can't be diluted by creators. The locked liquidity mechanism prevents sudden removal of trading pairs from decentralized exchanges, providing traders with confidence that they can always enter or exit positions.
 
 ## Token Details
 
-- **Name**: Lokquidity
+- **Name**: Lokquidity - mint auth revo - liquidity locked
 - **Symbol**: LOKQ
 - **Decimals**: 9
 - **Features**: 
