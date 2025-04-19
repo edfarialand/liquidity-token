@@ -30,32 +30,21 @@ async function createToken() {
   await connection.confirmTransaction(airdropSignature);
   console.log("Airdrop received!");
   
-  // Create token with specified properties using Token-2022 program
+  // Create token with specified properties using standard token program
   console.log("Creating token LOKQ (Lokquidity - mint auth revo - locked liquid)...");
-  
-  const TOKEN_2022_PROGRAM_ID = new PublicKey("TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb");
   
   const mintKeypair = Keypair.generate();
   
-  // Create mint account
-  const createMintAccountInstruction = await Token.createMintToInstruction(
+  // Create mint account using standard approach
+  const tokenMint = await Token.createMint(
     connection,
-    payer.publicKey,
-    mintKeypair.publicKey,
-    payer.publicKey, // Mint authority 
+    payer,
+    payer.publicKey, // Mint authority
     null, // Freeze authority (none)
     9, // Decimals
-    TOKEN_2022_PROGRAM_ID
-  );
-  
-  const transaction = new Transaction().add(createMintAccountInstruction);
-  await sendAndConfirmTransaction(connection, transaction, [payer, mintKeypair]);
-  
-  const tokenMint = new Token(
-    connection,
-    mintKeypair.publicKey,
-    TOKEN_2022_PROGRAM_ID,
-    payer
+    mintKeypair,
+    null, // Confirm options
+    TOKEN_PROGRAM_ID
   );
   
   console.log("Token created successfully!");
