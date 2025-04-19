@@ -1,0 +1,36 @@
+{
+  "name": "Lokquidity",
+  "symbol": "LOKQ",
+  "description": "A Solana token with locked liquidity and revoked mint authority",
+  "image": "https://raw.githubusercontent.com/edfarialand/solotto/c6fbc9b67791a131597e3b8dc175035624c5dc09/049E410C-5AC7-4943-B603-6EB47BA757DB.png",
+  "external_url": "https://yourprojectwebsite.com",
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "Utility Token"
+    },
+    {
+      "trait_type": "Liquidity",
+      "value": "Locked"
+    },
+    {
+      "trait_type": "Supply",
+      "value": "Fixed"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "https://raw.githubusercontent.com/edfarialand/solotto/c6fbc9b67791a131597e3b8dc175035624c5dc09/049E410C-5AC7-4943-B603-6EB47BA757DB.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "token",
+    "creators": [
+      {
+        "address": "Your wallet address here",
+        "share": 100
+      }
+    ]
+  }
+}
