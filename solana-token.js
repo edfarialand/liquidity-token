@@ -20,15 +20,9 @@ async function createToken() {
   const payer = Keypair.fromSecretKey(payerSecretKey);
   console.log(`Using wallet: ${payer.publicKey.toString()}`);
   
-  // Request airdrop for wallet
-  console.log("Requesting airdrop to creator wallet...");
-  const airdropSignature = await connection.requestAirdrop(
-    payer.publicKey,
-    2 * 1000000000 // 2 SOL
-  );
-  
-  await connection.confirmTransaction(airdropSignature);
-  console.log("Airdrop received!");
+  // Check balance (skip airdrop on mainnet)
+  const balance = await connection.getBalance(payer.publicKey);
+  console.log(`Creator wallet balance: ${balance / 1000000000} SOL`);
   
   // Create token with specified properties using standard token program
   console.log("Creating token LOKQ (Lokquidity - mint auth revo - locked liquid)...");
