@@ -1,2 +1,2 @@
-# Replace with your actual GitHub raw URL
-node solana-metadata-update.js https://raw.githubusercontent.com/username/repo/branch/token-metadata.json
+# LOKQ token metadata update command
+node solana-metadata-update.js https://raw.githubusercontent.com/edfarialand/liquidity-token/main/token-metadata.json

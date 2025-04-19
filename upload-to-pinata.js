@@ -61,7 +61,7 @@ Since we're unable to upload directly due to API key issues, follow these
 steps to get your token showing up on DEXscreener:
 
 1. The token logo is already set with this URL:
-   https://raw.githubusercontent.com/edfarialand/solotto/c6fbc9b67791a131597e3b8dc175035624c5dc09/049E410C-5AC7-4943-B603-6EB47BA757DB.png
+   https://raw.githubusercontent.com/edfarialand/liquidity-token/main/lokq-logo.png
 
 2. Create a public GitHub repository or use an existing one
 

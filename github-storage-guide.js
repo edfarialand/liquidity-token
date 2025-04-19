@@ -12,7 +12,7 @@ console.log(`
 ==================================================================================
 
 The good news is that your token logo is already hosted on GitHub:
-https://raw.githubusercontent.com/edfarialand/solotto/c6fbc9b67791a131597e3b8dc175035624c5dc09/049E410C-5AC7-4943-B603-6EB47BA757DB.png
+https://raw.githubusercontent.com/edfarialand/liquidity-token/main/lokq-logo.png
 
 To complete the process and make your token visible on DEXscreener:
 

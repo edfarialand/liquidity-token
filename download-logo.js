@@ -1,7 +1,7 @@
 const fs = require('fs');
 const https = require('https');
 
-const url = 'https://raw.githubusercontent.com/edfarialand/solotto/c6fbc9b67791a131597e3b8dc175035624c5dc09/049E410C-5AC7-4943-B603-6EB47BA757DB.png';
+const url = 'https://raw.githubusercontent.com/edfarialand/liquidity-token/main/lokq-logo.png';
 const path = './lokq-logo.png';
 
 console.log(`Downloading logo from ${url}...`);
