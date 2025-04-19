@@ -77,11 +77,11 @@ async function createToken() {
   // Create Metaplex Metadata
   console.log("Creating token metadata...");
   
-  // Metadata for the token - using direct URL for blockchain storage
+  // Metadata for the token - using GitHub repo URL for metadata
   const tokenMetadata = {
     name: "Lokquidity",
     symbol: "LOKQ",
-    uri: "https://raw.githubusercontent.com/edfarialand/solotto/c6fbc9b67791a131597e3b8dc175035624c5dc09/token-metadata.json", // Remote metadata URL for blockchain
+    uri: "https://raw.githubusercontent.com/edfarialand/liquidity-token/main/token-metadata.json", // Updated metadata URL from our repo
     sellerFeeBasisPoints: 0,
     creators: null,
     collection: null,
@@ -148,7 +148,7 @@ async function createToken() {
     name: "Lokquidity",
     symbol: "LOKQ",
     description: "A Solana token with locked liquidity and revoked mint authority",
-    image: "https://raw.githubusercontent.com/edfarialand/solotto/c6fbc9b67791a131597e3b8dc175035624c5dc09/049E410C-5AC7-4943-B603-6EB47BA757DB.png",
+    image: "https://raw.githubusercontent.com/edfarialand/liquidity-token/main/lokq-logo.png",
     attributes: [
       {
         trait_type: "Type",
@@ -166,7 +166,7 @@ async function createToken() {
     properties: {
       files: [
         {
-          uri: "https://raw.githubusercontent.com/edfarialand/solotto/c6fbc9b67791a131597e3b8dc175035624c5dc09/049E410C-5AC7-4943-B603-6EB47BA757DB.png",
+          uri: "https://raw.githubusercontent.com/edfarialand/liquidity-token/main/lokq-logo.png",
           type: "image/png"
         }
       ],
