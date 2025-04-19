@@ -1,6 +1,13 @@
 // Solana Token Creation Script - LOKQ (Lokquidity) with Metaplex Metadata
 const { Keypair, Connection, clusterApiUrl, PublicKey, Transaction, sendAndConfirmTransaction } = require('@solana/web3.js');
-const { Token, TOKEN_PROGRAM_ID } = require('@solana/spl-token');
+const { 
+  Token, 
+  TOKEN_PROGRAM_ID,
+  createMint,
+  getOrCreateAssociatedTokenAccount,
+  mintTo,
+  setAuthority
+} = require('@solana/spl-token');
 const { 
   Metadata, 
   MetadataProgram, 
@@ -29,8 +36,8 @@ async function createToken() {
   
   const mintKeypair = Keypair.generate();
   
-  // Create mint account using standard approach
-  const tokenMint = await Token.createMint(
+  // Create mint account using updated approach
+  const tokenMint = await createMint(
     connection,
     payer,
     payer.publicKey, // Mint authority
@@ -42,20 +49,25 @@ async function createToken() {
   );
   
   console.log("Token created successfully!");
-  console.log(`Token address: ${tokenMint.publicKey.toString()}`);
+  console.log(`Token address: ${tokenMint.toString()}`);
   
   // Create associated token account
-  const tokenAccount = await tokenMint.getOrCreateAssociatedAccountInfo(
+  const tokenAccount = await getOrCreateAssociatedTokenAccount(
+    connection,
+    payer,
+    tokenMint,
     payer.publicKey
   );
   console.log(`Token account: ${tokenAccount.address.toString()}`);
   
   // Mint tokens
   const amount = 1000000000; // 1 billion tokens with 9 decimals
-  await tokenMint.mintTo(
+  await mintTo(
+    connection,
+    payer,
+    tokenMint,
     tokenAccount.address,
     payer.publicKey,
-    [],
     amount * (10 ** 9)
   );
   console.log(`Minted ${amount} LOKQ tokens to ${tokenAccount.address.toString()}`);
@@ -120,11 +132,13 @@ async function createToken() {
   console.log(`Token metadata created: ${metadataPDA.toString()}`);
   
   // Revoke mint authority
-  await tokenMint.setAuthority(
-    tokenMint.publicKey,
+  await setAuthority(
+    connection,
+    payer,
+    tokenMint,
+    payer.publicKey,
     null,
     'MintTokens',
-    payer.publicKey,
     []
   );
   console.log("Mint authority revoked - token supply is now fixed");
@@ -165,7 +179,7 @@ async function createToken() {
   
   // Save keys to file
   const keyData = {
-    tokenAddress: tokenMint.publicKey.toString(),
+    tokenAddress: tokenMint.toString(),
     tokenAccount: tokenAccount.address.toString(),
     metadataPDA: metadataPDA.toString(),
     payerPublicKey: payer.publicKey.toString(),
@@ -176,10 +190,10 @@ async function createToken() {
   console.log("Keys saved to token-keys.json");
   
   return {
-    tokenMint,
-    tokenAccount,
-    metadataPDA,
-    payer
+    tokenMint: tokenMint.toString(),
+    tokenAccount: tokenAccount.address.toString(),
+    metadataPDA: metadataPDA.toString(),
+    payer: payer.publicKey.toString()
   };
 }
 
