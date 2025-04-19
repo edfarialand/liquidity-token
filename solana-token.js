@@ -11,8 +11,8 @@ const { Buffer } = require('buffer');
 const fs = require('fs');
 
 async function createToken() {
-  // Connect to cluster
-  const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
+  // Connect to cluster (mainnet for production)
+  const connection = new Connection(clusterApiUrl('mainnet-beta'), 'confirmed');
   
   // Use our pre-generated wallet keypair with mnemonic
   const walletData = JSON.parse(fs.readFileSync('./mnemonicWallet.json'));
