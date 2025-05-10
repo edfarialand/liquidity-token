@@ -1,2 +1,0 @@
-# LOKQ token metadata update command
-node solana-metadata-update.js https://raw.githubusercontent.com/edfarialand/liquidity-token/main/token-metadata.json
