@@ -7,7 +7,6 @@
     "create": "node solana-token.js"
   },
   "dependencies": {
-    "@anthropic-ai/claude-code": "^0.2.72",
     "@metaplex-foundation/mpl-token-metadata": "^2.9.0",
     "@solana/spl-token": "^0.3.7",
     "@solana/web3.js": "^1.73.0",

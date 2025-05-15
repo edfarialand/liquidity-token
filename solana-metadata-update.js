@@ -12,15 +12,15 @@ async function updateTokenMetadata() {
   
   try {
     // Connect to cluster (devnet for testing)
-    const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
+    const connection = new Connection(clusterApiUrl('mainnet-beta'), 'confirmed');
     
     // Load saved keys from previous token creation
-    if (!fs.existsSync('./token-keys.json')) {
+    if (!fs.existsSync('./id.json')) {
       console.error("Error: token-keys.json not found. Please run solana-token.js first to create the token.");
       return;
     }
     
-    const keyData = JSON.parse(fs.readFileSync('./token-keys.json'));
+    const keyData = JSON.parse(fs.readFileSync('./id.json'));
     
     // Reconstruct the keypair from the saved secret key
     const payerSecretKey = new Uint8Array(keyData.payerSecretKey);
@@ -32,14 +32,11 @@ async function updateTokenMetadata() {
     console.log(`Token Address: ${tokenAddress.toString()}`);
     console.log(`Metadata PDA: ${metadataPDA.toString()}`);
     
-    // Prompt for the new permanent URI for token metadata
-    const permanentUri = process.argv[2];
-    if (!permanentUri) {
-      console.error("Error: Please provide the permanent metadata URI as a command line argument.");
-      console.log("Usage: node solana-metadata-update.js <PERMANENT_METADATA_URI>");
-      console.log("Example: node solana-metadata-update.js https://arweave.net/abc123");
-      return;
-    }
+    // --- Define Metadata URI ---
+    // The new JSON metadata URI is hardcoded here.
+    const permanentUri = "https://arweave.net/-Jzxp64F3K2-K2hOpW9VqU3Vk8jodJCN2l4wcyW-8UY";
+    console.log(`Using hardcoded permanent metadata URI: ${permanentUri}`);
+
     
     console.log(`Updating metadata URI to: ${permanentUri}`);
     
@@ -50,7 +47,7 @@ async function updateTokenMetadata() {
         metadata: metadataPDA,
         updateAuthority: payer.publicKey,
         metadataData: {
-          name: "Lokquidity",
+          name: "Lokquidity - Mint Authority Revoked, Liquidity Locked",
           symbol: "LOKQ",
           uri: permanentUri,
           sellerFeeBasisPoints: 0,
