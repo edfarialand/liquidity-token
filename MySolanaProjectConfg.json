@@ -1,0 +1,6 @@
+{
+  "payerKeyPath": "/home/solottotoke_gmail_com/.config/solana/id.json",
+  "tokenAddress": "YOUR_TOKEN_MINT_ADDRESS_HERE",
+  "metadataPDA": "YOUR_METADATA_PDA_ADDRESS_HERE",
+  "jsonMetadataUri": "https://arweave.net/-Jzxp64F3K2-K2hOpW9VqU3Vk8jodJCN2l4wcyW-8UY"
+}
