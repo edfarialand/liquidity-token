@@ -33,7 +33,7 @@ async function createToken() {
   try {
     // --- 1. Load Configuration and Connect ---
     const connection = new Connection(clusterApiUrl('mainnet-beta'), 'confirmed');
-    const projectConfigPath = './project-token-config.json';
+    const projectConfigPath = './MySolanaProjectConfg.json';
 
     if (!fs.existsSync(projectConfigPath)) {
       console.error(`Error: Project token config file not found at ${projectConfigPath}.`);
