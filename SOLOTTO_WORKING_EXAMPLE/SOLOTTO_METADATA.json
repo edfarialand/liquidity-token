@@ -1,0 +1,156 @@
+{
+  "name": "Solotto Beta",
+  "symbol": "SLTO",
+  "description": "This is Solotto, a Solana based token with a lottery feature giving the weekly winner 1% of all on chain transactions. Aren't you sick of influencers promising a prize for subscribing or reposting and in the back of your mind you know they're lying and nothing is going to be distributed... and even so, you aren't gonna win? This is what you need. This is a coin that will guarantee you at least still have the Solotto in your wallet after every drawing and maybe more. The code is open source and hosted on our github for all to see and what is even better, YOU CAN SEE THE TRANSACTIONS. YOU CAN SEE THE MONEY GOING INTO THAT WEEKS WINNERS ADDRESS. THE BLOCKCHAIN SPEAKS FOR ITSELF. So do your own research and be safe with your investments but i have one question. What lottery ticket holds value after drawing? None but Solotto. There are no lottery tickets. Owning the currency is your entry so even if you dont win this weeks drawing, you can sell your Solotto making this the smartest lottery on top of the most transparent. Smart. Transparent. Solotto.",
+  "image": "https://raw.githubusercontent.com/edfarialand/solotto/ce712299cb50bf0fe118bd6e6384741b5f73e4e7/pressd.png",
+  "banner": "https://raw.githubusercontent.com/edfarialand/solotto/7eb56a407b423fc74929c91ddf67c98aa64eece1/EBB8A728-22F7-4AD5-A4D6-89FEDB81CBAF.png",
+  "external_url": "https://solotto.io",
+  
+  "attributes": [
+    {
+      "trait_type": "Token Standard",
+      "value": "Token-2022"
+    },
+    {
+      "trait_type": "Token Type",
+      "value": "Utility"
+    },
+    {
+      "trait_type": "Total Supply",
+      "value": "18,000,000,000"
+    },
+    {
+      "trait_type": "Decimals",
+      "value": "9"
+    },
+    {
+      "trait_type": "Transfer Fee",
+      "value": "1%"
+    },
+    {
+      "trait_type": "Creator Fee",
+      "value": "1%"
+    },
+    {
+      "trait_type": "Lottery Cycle",
+      "value": "7 Days"
+    }
+  ],
+  
+  "properties": {
+    "category": "Token",
+    "creators": [
+      {
+        "address": "DWJcugMt2YpabVGHQ46romguVrMFndfuKrX4ehEZUVBB",
+        "share": 100
+      }
+    ],
+    "files": [
+      {
+        "uri": "https://raw.githubusercontent.com/edfarialand/solotto/ce712299cb50bf0fe118bd6e6384741b5f73e4e7/pressd.png",
+        "type": "image/png"
+      },
+      {
+        "uri": "https://raw.githubusercontent.com/edfarialand/solotto/7eb56a407b423fc74929c91ddf67c98aa64eece1/EBB8A728-22F7-4AD5-A4D6-89FEDB81CBAF.png",
+        "type": "image/png"
+      }
+    ]
+  },
+  
+  "collection": {
+    "name": "Solotto Ecosystem",
+    "family": "Solana Tokens"
+  },
+  
+  "tokenomics": {
+    "total_supply": 18000000000,
+    "distribution": {
+      "liquidity_pool": 7200000000,
+      "community_rewards": 5400000000,
+      "marketing": 3600000000,
+      "team_development": 1800000000
+    },
+    "percentages": {
+      "liquidity_pool": 40,
+      "community_rewards": 30,
+      "marketing": 20,
+      "team_development": 10
+    },
+    "vesting": {
+      "liquidity_pool": "Immediately available",
+      "community_rewards": "Released over 12 months",
+      "marketing": "Released over 24 months",
+      "team_development": "6 month cliff, then 24 month linear vesting"
+    }
+  },
+  
+  "social_media": {
+    "twitter": "https://x.com/solottotoken?s=21",
+    "discord": "https://discord.gg/Tat8XqK9",
+    "github": "https://github.com/edfarialand/solotto"
+  },
+  
+  "roadmap": {
+    "phase1": {
+      "title": "Launch & Initial Liquidity",
+      "items": [
+        "Create Solotto token on testnet",
+        "Deploy token on mainnet",
+        "Add initial liquidity pool",
+        "Launch website and social media"
+      ]
+    },
+    "phase2": {
+      "title": "Lottery Implementation",
+      "items": [
+        "Deploy lottery smart contract",
+        "Implement weekly winner selection",
+        "Set up automated fee distribution",
+        "Community growth initiatives"
+      ]
+    },
+    "phase3": {
+      "title": "Expansion & Adoption",
+      "items": [
+        "Exchange listings",
+        "Marketing campaigns",
+        "Partnerships with other projects",
+        "Enhanced lottery features"
+      ]
+    },
+    "phase4": {
+      "title": "Ecosystem Development",
+      "items": [
+        "Additional Solotto utility products",
+        "Governance mechanisms",
+        "Staking rewards",
+        "Cross-chain integration"
+      ]
+    }
+  },
+  
+  "team": {
+    "founder": {
+      "role": "Founder & Lead Developer",
+      "background": "Experienced blockchain developer with expertise in Solana"
+    }
+  },
+  
+  "technical_details": {
+    "blockchain": "Solana",
+    "token_program": "Token-2022",
+    "contract_address": "To be deployed",
+    "features": [
+      "1% transaction fee to creator",
+      "1% transaction fee to weekly lottery winner",
+      "Weekly random selection of 4 holders",
+      "Winner is highest balance holder among selected 4",
+      "Automatic fee distribution through smart contract"
+    ],
+    "security": {
+      "audit_status": "Pending",
+      "open_source": true,
+      "github_repository": "https://github.com/solotto"
+    }
+  }
+}
