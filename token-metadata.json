@@ -1,7 +1,7 @@
 {
-  "name": "Lokquidity - mint auth revo - liquidity locked",
-  "symbol": "LOKQ",
-  "description": "LOKQ is a pioneering Solana token designed with built-in protections against rug pulls and market manipulation. The token implements two critical security features: permanently revoked mint authority and locked liquidity. With mint authority revocation, no new tokens can ever be created, ensuring a truly fixed supply that can't be diluted by creators. The locked liquidity mechanism prevents sudden removal of trading pairs from decentralized exchanges, providing traders with confidence that they can always enter or exit positions. LOKQ demonstrates how blockchain technology can be leveraged to create inherently safer financial instruments through immutable code-based guarantees rather than relying solely on trust.",
+  "name": "Paragon Pool",
+  "symbol": "PGPL",
+  "description": "A solana based token with a lottery function. Every week, the winner will recieve 1% of all transactions for the week with a new winner selected every cycle. Its a safer smarter lottery with 100% transparency. Now playing the lottery is responsible. You can invest and play the lottery at the same time. Lottery tickets never expire, can gain value, and you can sell your tokens after the drawing to get what you spent back. No other lottery lets you trade in expired lottery tickets",
   "image": "https://arweave.net/iT0xk5TdjK9t1v0mRV0gHjQ3x-hc6T6t3H2cvQkk3sI",
   "external_url": "https://arweave.net/-Jzxp64F3K2-K2hOpW9VqU3Vk8jodJCN2l4wcyW-8UY",
   "attributes": [
@@ -28,7 +28,7 @@
     "category": "token",
     "creators": [
       {
-        "address": "B1ZE8ufwLkQddmxVrfWPVFi96uQRK4rGdYDr9SNKi6TK",
+        "address": "GDnemyKTrAwGvwCjnA56mr9WTcQpG38LY3XCBBBMQJQW",
         "share": 100
       }
     ]

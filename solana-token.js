@@ -28,7 +28,7 @@
     "category": "token",
     "creators": [
       {
-        "address": "13xZVeQA95PgGC4dyy8T6rprjQyzzehFm2udfPLP2HGa", // <-- PASTE YOUR WALLET'S PUBLIC KEY HERE
+        "address": "GDnemyKTrAwGvwCjnA56mr9WTcQpG38LY3XCBBBMQJQW", // <-- PASTE YOUR WALLET'S PUBLIC KEY HERE
         "share": 100
       }
     ]
